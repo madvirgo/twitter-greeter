@@ -1,0 +1,56 @@
+{
+    "caseSensitive": false,
+    "properties": {
+        "name": "tweetGreet",
+        "description": "Tweet Greetings",
+        "icon": "twitter-square",
+        "environment": {
+            "type": "noflo-browser"
+        }
+    },
+    "inports": {},
+    "outports": {},
+    "groups": [],
+    "processes": {
+        "strings/SendString_ib5xe": {
+            "component": "strings/SendString",
+            "metadata": {
+                "label": "SendString",
+                "x": 324,
+                "y": 360,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "twitter-greeter/tweet_nr6oi": {
+            "component": "twitter-greeter/tweet",
+            "metadata": {
+                "label": "tweet",
+                "x": 432,
+                "y": 360,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": [
+        {
+            "src": {
+                "process": "strings/SendString_ib5xe",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "twitter-greeter/tweet_nr6oi",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "data": "Tweet from NoFlo",
+            "tgt": {
+                "process": "strings/SendString_ib5xe",
+                "port": "string"
+            }
+        }
+    ]
+}

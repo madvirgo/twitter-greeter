@@ -1,0 +1,25 @@
+{
+    "caseSensitive": false,
+    "properties": {
+        "name": "main",
+        "environment": {
+            "type": "noflo-browser"
+        }
+    },
+    "inports": {},
+    "outports": {},
+    "groups": [],
+    "processes": {
+        "twitter-greeter/tweetGreet_c747j": {
+            "component": "twitter-greeter/tweetGreet",
+            "metadata": {
+                "label": "tweetGreet",
+                "x": 396,
+                "y": 252,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": []
+}
